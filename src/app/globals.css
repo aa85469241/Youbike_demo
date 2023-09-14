@@ -1,27 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+    :root {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: "Noto Sans TC, sans-serif";
+        max-height: 100vh;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+    .main-container {
+        @apply w-full px-8 lg:px-24;
+    }
+    .logo {
+        @apply h-[60px] w-[60px] md:h-[80px] md:w-[80px];
+    }
+    .navLink {
+        @apply w-fit font-bold text-lg text-white mb-8 md:mb-0 hover:text-success-dark md:text-success-dark md:hover:text-success;
+    }
+    .table-content {
+        @apply p-2 md:p-4 text-center;
+    }
+    .table-head-text {
+        @apply text-white text-base font-medium md:text-lg;
+    }
+    .table-body-text {
+        @apply text-[#323232] text-sm font-normal md:text-base;
+    }
+    .checkbox {
+        @apply relative w-[18px] h-[18px] appearance-none border-[#AEAEAE] border-2;
+    }
+    .checkbox:checked {
+        @apply bg-success border-none;
+    }
+    .checkbox::after:checked {
+        @apply content-["✔"] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white;
+    }
 }
