@@ -104,7 +104,7 @@ const Second = () => {
 
     return (
         <div className="w-full h-72 flex flex-col items-center justify-center gap-6">
-            <span className="text-lg font-bold capitalize font-noto tracking-wider">-- open console --</span>
+            <span className="text-lg font-bold capitalize font-noto tracking-wider">-- Please open console --</span>
             <button
                 className="text-lg font-bold mr-2 bg-success py-2 px-4 rounded-lg"
                 onClick={() => runLottery(prizes, rewards)}
