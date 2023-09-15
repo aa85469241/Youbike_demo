@@ -46,7 +46,7 @@ export const FilterForm = ({
     return (
         <form className="mt-4">
             <div>
-                <label className="text-2xl text-success font-bold">站點資訊</label>
+                <label className="text-lg md:text-2xl text-success font-bold">站點資訊</label>
             </div>
             <div className="flex gap-4 mt-2">
                 {/* city select list */}
@@ -54,7 +54,7 @@ export const FilterForm = ({
                     <input
                         required
                         type="text"
-                        className="w-full rounded-lg bg-secondary text-lg font-semibold pl-4 py-2"
+                        className="w-full rounded-lg bg-secondary text-sm md:text-lg font-semibold pl-4 py-2"
                         value={currentCity}
                         onChange={(e) => setCurrentCity(e.target.value)}
                         onClick={() => setOpen(true)}
@@ -101,7 +101,7 @@ export const FilterForm = ({
                         type="text"
                         onChange={(e) => setSearch(e.target.value)}
                         value={search === "" ? "" : search}
-                        className="bg-secondary text-lg font-semibold rounded-lg px-4 py-2"
+                        className="bg-secondary text-sm md:text-lg font-semibold rounded-lg px-4 py-2"
                         placeholder='搜索站點'
                     />
                     {search === ""

@@ -9,7 +9,7 @@ export const Table = ({ search, currentCity, data }: TableProps) => {
     return (
         <div
             id="table-container"
-            className="rounded-[28px] max-h-64 overflow-y-scroll mt-8 md:mt-4 scrollbar-none"
+            className="rounded-[28px] max-h-72 md:max-h-64 overflow-y-scroll mt-8 md:mt-4 scrollbar-none"
         >
             <table className="w-full sticky border-collapse">
                 <thead className="bg-success sticky top-0">

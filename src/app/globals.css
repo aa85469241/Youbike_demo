@@ -36,7 +36,7 @@
         @apply text-[#323232] text-sm font-normal md:text-base;
     }
     .checkbox {
-        @apply relative w-[18px] h-[18px] appearance-none border-[#AEAEAE] border-2;
+        @apply relative w-[14px] h-[14px] md:w-[18px] md:h-[18px] appearance-none border-[#AEAEAE] border-2;
     }
     .checkbox:checked {
         @apply bg-success border-none;

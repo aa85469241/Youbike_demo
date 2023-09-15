@@ -39,7 +39,7 @@ export const CheckBoxForm = ({ areaList }: CheckBoxFormProps) => {
                     onChange={handleAllCheck}
                     className="checkbox"
                 />
-                <label className="text-base md:text-lg font-normal text-[#323232] whitespace-nowrap">全部選取</label>
+                <label className="text-sm md:text-lg font-normal text-[#323232] whitespace-nowrap">全部選取</label>
             </span>
             <div className="grid grid-cols-3 md:grid-cols-4 items-center">
                 {areaList !== undefined
@@ -55,7 +55,7 @@ export const CheckBoxForm = ({ areaList }: CheckBoxFormProps) => {
                                 checked={isCheck?.includes(area)}
                                 onChange={handleCheck}
                             />
-                            <label className="text-base md:text-lg font-normal text-[#323232] whitespace-nowrap">{area}</label>
+                            <label className="text-sm md:text-lg font-normal text-[#323232] whitespace-nowrap">{area}</label>
                         </span>
                     ))
                     : ""
